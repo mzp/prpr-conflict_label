@@ -1,7 +1,4 @@
 require "prpr/conflict_label/version"
+require "prpr/handler/conflict_label"
+require "prpr/action/conflict_label/check_all"
 
-module Prpr
-  module ConflictLabel
-    # Your code goes here...
-  end
-end
