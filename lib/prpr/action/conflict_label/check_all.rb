@@ -23,11 +23,21 @@ module Prpr
         end
 
         def add_label(pull_request)
+          return if already_labeled?(pull_request)
           github.add_labels_to_an_issue(repository, pull_request.number, [label])
         end
 
         def remove_label(pull_request)
+          return unless already_labeled?(pull_request)
           github.remove_label(repository, pull_request.number, label)
+        end
+
+        def already_labeled?(pull_request)
+          labels(pull_request).map(&:name).any? { |name| name == label }
+        end
+
+        def labels(pull_request)
+          github.labels_for_issue repository, pull_request.number
         end
 
         def label
