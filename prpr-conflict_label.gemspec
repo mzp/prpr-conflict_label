@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["mzpppp@gmail.com"]
 
   spec.summary       = "Prpr plugin to label unmergeable pull request as conflict."
-  spec.description   = "When some commits is pushed, add "conflict" label to unmergeable pull request."
+  spec.description   = "When some commits is pushed, add 'conflict' label to unmergeable pull request."
   spec.homepage      = "https://github.com/mzp/prpr-conflict_label"
   spec.license       = "MIT"
 
