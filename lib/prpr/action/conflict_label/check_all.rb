@@ -4,10 +4,13 @@ module Prpr
       class CheckAll < Base
         def call
           pull_requests.each do |pull_request|
-            if mergeable? pull_request
+            case mergeable? pull_request
+            when true
               remove_label pull_request
-            else
+            when false
               add_label pull_request
+            else
+              # ignore nil
             end
           end
         end
