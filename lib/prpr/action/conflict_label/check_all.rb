@@ -22,7 +22,7 @@ module Prpr
         end
 
         def mergeable?(pull_request)
-          github.pull_request(repository, pull_request.number).mergeable
+          github.pull_request(repository, pull_request.number).tap{|x| p x}.mergeable
         end
 
         def add_label(pull_request)
