@@ -8,7 +8,7 @@ Add this line to your application's Gemfile:
 
 ```ruby
 # Gemfile
-gem 'prpr-conflict_label', github: 'mzp/prpr-conflict_label'
+gem 'prpr-conflict_label'
 ```
 
 ## Usage
